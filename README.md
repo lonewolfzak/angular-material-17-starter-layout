@@ -1,3 +1,6 @@
+
+![ScreenRecording2024-02-18at17 13 03-ezgif com-video-to-gif-converter](https://github.com/lonewolfzak/angular-material-17-starter-layout/assets/49722575/21cb0dfb-dbdf-4f28-a7f5-ad52cdea96db)
+
 # Angular 17 Dashboard Layout
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
