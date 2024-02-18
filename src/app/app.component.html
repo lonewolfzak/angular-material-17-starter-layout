@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <button mat-icon-button
+          (click)="sidebarCollapsed.set(!sidebarCollapsed())"
+          class="example-icon"
+          aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{title}}</span>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer [autoFocus]="false"
+              [opened]="sidebarCollapsed()">
+    <mat-nav-list>
+      @for (item of sidebarItems(); track item){
+      <a mat-list-item
+         [routerLink]="item.route"
+         (click)="sidebarCollapsed.set(false)"
+         routerLinkActive
+         [routerLinkActiveOptions]="{exact: true}"
+         #rla="routerLinkActive"
+         [activated]="rla.isActive">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <span matListItemTitle>{{item.title}}</span>
+      </a>
+      }
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="content-wrapper">
+    <router-outlet />
+  </mat-drawer-content>
+</mat-drawer-container>
