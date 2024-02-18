@@ -1,4 +1,4 @@
-# Angular17DashboardLayout
+# Angular 17 Dashboard Layout
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
